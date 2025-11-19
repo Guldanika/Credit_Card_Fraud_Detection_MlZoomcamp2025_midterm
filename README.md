@@ -86,14 +86,48 @@ Test set (final Logistic Regression with optimal threshold):
 - Precision 0.9206 → Recall 0.7838 → F1 0.8467
 - Overall accuracy 99.95%
 
+## Final Model
+
+- Logistic Regression (max_iter=5000)
+- Trained on SMOTE-balanced data
+- Custom threshold = 1.0 (Youden’s J optimized)
+- Saved as model.pkl + threshold.pkl using joblib
+
+Deployment:
+- FastAPI service (app.py)
+- Input: 30 features (Time + V1–V28 + Amount)
+- Output: prediction (0/1) + fraud_probability + status
+- Fully containerized with Docker
+
+**HOW TO RUN** 
+## How to Run
+
+### Locally
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app:app --reload
+``` 
+
+
+**DOCKER**
+```bash
+docker build -t fraud-detection .
+docker run -p 8000:8000 fraud-detection
+```
 
 ## Video Demonstrations
 
 ### Local FastAPI deployment
+```
 [![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
+```
 
 ### Full Docker containerization (build → run → prediction)
+```
 [![Docker containerization demo](https://img.youtube.com/vi/L4TPK6dOKyA/maxresdefault.jpg)](https://youtu.be/L4TPK6dOKyA)
+```
 
 Both demos look identical — this is the point of Docker: **100% reproducible environment** 
 
@@ -129,11 +163,13 @@ python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app:app --reload
+```
 
 2. With Docker (recommended – works on any machine)
+```
 docker build -t fraud-detection .
 docker run -p 8000:8000 fraud-detection
-
+```
 
 API Usage Example (Swagger UI available at /docs)
 {
@@ -153,9 +189,11 @@ The model successfully detects fraudulent transactions in highly imbalanced real
 ## Video Demonstrations
 
 ### Local FastAPI deployment
+```
 [![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
-
+```
 ### Full Docker containerization (build → run → prediction)
+```
 [![Docker containerization demo](https://img.youtube.com/vi/L4TPK6dOKyA/maxresdefault.jpg)](https://youtu.be/L4TPK6dOKyA)
-
+```
 Both demos look identical — this is the point of Docker: **100% reproducible environment**
