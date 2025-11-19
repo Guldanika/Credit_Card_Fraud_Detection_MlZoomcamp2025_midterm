@@ -26,7 +26,7 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
-📊 Exploratory Data Analysis (EDA) - Summary
+**📊 EXPLORATORY DATA ANALYSIS (EDA) - Summary**
 
 The Credit Card Fraud Detection dataset contains 284,807 transactions, of which only 0.17% are fraudulent. Below are the key insights from the exploratory analysis.
 
@@ -64,7 +64,7 @@ No missing values.
 All features numeric → ready for ML.
 Dataset size allows efficient training even with SMOTE applied.
 
-⭐ Overall EDA Conclusion
+⭐ **Overall EDA Conclusion**
 
 The dataset is clean, highly imbalanced, and structurally suited for anomaly detection and binary classification. Several PCA components demonstrate strong separability between fraud and non-fraud classes, enabling effective modeling with Logistic Regression, Random Forest, XGBoost, or ensemble approaches, especially when combined with SMOTE and threshold optimization.
 
