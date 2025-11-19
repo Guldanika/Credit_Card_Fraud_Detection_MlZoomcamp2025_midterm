@@ -26,6 +26,44 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
+✅ Summary of Exploratory Data Analysis (EDA)
+
+During EDA of the Credit Card Fraud Detection dataset, several important insights were identified:
+
+1. Strong class imbalance
+
+Fraudulent transactions constitute only 0.17% of all records.
+
+This confirms the need for techniques like SMOTE, threshold tuning, or cost-sensitive learning.
+
+2. Distribution characteristics
+
+Most PCA-transformed features (V1–V28) follow near-Gaussian distributions with significant variance differences between fraud and non-fraud cases.
+
+Amount and Time distributions are highly skewed and required scaling/normalization for proper model performance.
+
+3. Feature–target relationships
+
+Some components show clear separation between fraud and non-fraud classes (e.g., V14, V12, V10).
+
+These become strong predictors during modeling.
+
+4. Correlation structure
+
+Because the dataset is PCA-transformed, there is very low multicollinearity—correlations between features are close to zero.
+
+Top negatively correlated features with fraud include V9, V1, V5, V6.
+
+5. Outliers
+
+Fraudulent transactions show distinct distribution tails in features like V14, V12, V17 — these differences often allow models to detect anomalies.
+
+6. Data quality
+
+No missing values were found.
+
+All features are numeric — ideal for ML modeling.
+
 ## Video Demonstrations
 
 ### Local FastAPI deployment
