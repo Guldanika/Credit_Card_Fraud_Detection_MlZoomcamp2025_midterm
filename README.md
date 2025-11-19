@@ -26,43 +26,47 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
-✅ Summary of Exploratory Data Analysis (EDA)
+📊 Exploratory Data Analysis (EDA) Summary
 
-During EDA of the Credit Card Fraud Detection dataset, several important insights were identified:
+The Credit Card Fraud Detection dataset contains 284,807 transactions, of which only 0.17% are fraudulent. Below are the key insights from the exploratory analysis.
 
-1. Strong class imbalance
+1. Severe Class Imbalance
+Fraud cases: 492
+Non-fraud cases: 284,315
+Ratio ≈ 1 : 577
+This imbalance requires techniques such as SMOTE, class weighting, or threshold tuning to improve model sensitivity.
 
-Fraudulent transactions constitute only 0.17% of all records.
+2. Feature Distributions
+Most features (V1–V28) are PCA-transformed components with near-Gaussian distributions.
+Amount and Time are highly skewed and benefit from scaling.
+Fraudulent transactions show noticeably different distribution shapes in certain components, especially:
+V14
+V12
+V10
+V17
+These features often emerge as top predictors.
 
-This confirms the need for techniques like SMOTE, threshold tuning, or cost-sensitive learning.
+3. Correlation Structure
+Because PCA was used, the dataset exhibits very low multicollinearity.
 
-2. Distribution characteristics
+Most correlations between features are close to zero.
+Features most correlated with fraud (negatively):
+V9
+V1
+V5
+V6
 
-Most PCA-transformed features (V1–V28) follow near-Gaussian distributions with significant variance differences between fraud and non-fraud cases.
+4. Outlier Behavior
+Fraudulent transactions tend to form distinct tails or separate clusters in features like V14, V12, and V17, which helps ML models detect anomalies.
 
-Amount and Time distributions are highly skewed and required scaling/normalization for proper model performance.
+5. Data Quality
+No missing values.
+All features numeric → ready for ML.
+Dataset size allows efficient training even with SMOTE applied.
 
-3. Feature–target relationships
+⭐ Overall EDA Conclusion
 
-Some components show clear separation between fraud and non-fraud classes (e.g., V14, V12, V10).
-
-These become strong predictors during modeling.
-
-4. Correlation structure
-
-Because the dataset is PCA-transformed, there is very low multicollinearity—correlations between features are close to zero.
-
-Top negatively correlated features with fraud include V9, V1, V5, V6.
-
-5. Outliers
-
-Fraudulent transactions show distinct distribution tails in features like V14, V12, V17 — these differences often allow models to detect anomalies.
-
-6. Data quality
-
-No missing values were found.
-
-All features are numeric — ideal for ML modeling.
+The dataset is clean, highly imbalanced, and structurally suited for anomaly detection and binary classification. Several PCA components demonstrate strong separability between fraud and non-fraud classes, enabling effective modeling with Logistic Regression, Random Forest, XGBoost, or ensemble approaches, especially when combined with SMOTE and threshold optimization.
 
 ## Video Demonstrations
 
