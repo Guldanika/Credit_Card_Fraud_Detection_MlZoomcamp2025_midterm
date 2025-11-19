@@ -75,9 +75,16 @@ API Usage Example (Swagger UI available at /docs)
 }
 
 
-## Video Demonstration
-30-second video showing Docker build → run → live fraud prediction is on my Youtube chanel here https://youtu.be/x-26tp88zHw. 
 
 ###Conclusion
 The model successfully detects fraudulent transactions in highly imbalanced real-world data and is fully production-ready (FastAPI + Docker).
 
+## Video Demonstrations
+
+### 1. Local FastAPI deployment
+[![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
+
+### 2. Full Docker containerization (build → run → live prediction)
+[![Docker containerization demo](https://img.youtube.com/vi/L4TPK6dOKyA/maxresdefault.jpg)](https://youtu.be/L4TPK6dOKyA)
+
+Both demos look identical — this proves that Docker provides **exactly the same behavior** as local run. Perfect reproducibility achieved.
