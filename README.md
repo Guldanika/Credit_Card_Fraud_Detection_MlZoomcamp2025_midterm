@@ -11,7 +11,9 @@
 Build a predictive model that can reliably detect fraudulent credit card transactions, **maximizing the detection of rare fraud cases while minimizing false alarms**.
 
 Dataset: [Kaggle Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud)  
-→ 284,807 transactions · only 492 fraud cases (~0.17% class imbalance)
+→ 284,807 transactions · only 492 fraud cases (~0.17% class imbalance) 
+
+SEE the whole working (EDA, preprocessing, model training, evaluation, saving part in Notebook here: https://github.com/Guldanika/Credit_Card_Fraud_Detection_MlZoomcamp2025_midterm/blob/main/Credit_Card_Fraud_Detection.ipynb 
 
 This project covers the complete ML lifecycle:
 - Exploratory Data Analysis
@@ -45,10 +47,6 @@ This project covers the complete ML lifecycle:
 ├── Dockerfile                 # Full containerization
 ├── creditcard.csv             # Dataset (284807 rows)
 └── README.md                  # You are here
-
-
-SEE the whole working (EDA, preprocessing, model training, evaluation, saving part in Notebook here: https://github.com/Guldanika/Credit_Card_Fraud_Detection_MlZoomcamp2025_midterm/blob/main/Credit_Card_Fraud_Detection.ipynb 
-
 
 ## How to Run
 
