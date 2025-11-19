@@ -37,8 +37,6 @@ This project covers the complete ML lifecycle:
 
 ## Project Structure 
 
-SEE the whole working (EDA, preprocessing, model training, evaluation, saving part in Notebook here: https://github.com/Guldanika/Credit_Card_Fraud_Detection_MlZoomcamp2025_midterm/blob/main/Credit_Card_Fraud_Detection.ipynb 
-
 ├── app.py                     # FastAPI service
 ├── train_model_fraud_detection.py  # Training script (exported from notebook)
 ├── model.pkl                  # Final Logistic Regression model
@@ -47,6 +45,9 @@ SEE the whole working (EDA, preprocessing, model training, evaluation, saving pa
 ├── Dockerfile                 # Full containerization
 ├── creditcard.csv             # Dataset (284807 rows)
 └── README.md                  # You are here
+
+
+SEE the whole working (EDA, preprocessing, model training, evaluation, saving part in Notebook here: https://github.com/Guldanika/Credit_Card_Fraud_Detection_MlZoomcamp2025_midterm/blob/main/Credit_Card_Fraud_Detection.ipynb 
 
 
 ## How to Run
