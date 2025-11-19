@@ -26,6 +26,17 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
+## Video Demonstrations
+
+### Local FastAPI deployment
+[![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
+
+### Full Docker containerization (build → run → prediction)
+[![Docker containerization demo](https://img.youtube.com/vi/L4TPK6dOKyA/maxresdefault.jpg)](https://youtu.be/L4TPK6dOKyA)
+
+Both demos look identical — this is the point of Docker: **100% reproducible environment** 
+
+
 ## Results
 
 | Model                  | Precision (class 1) | Recall (class 1) | F1-score (class 1) | Test Accuracy |
@@ -80,13 +91,10 @@ The model successfully detects fraudulent transactions in highly imbalanced real
 
 ## Video Demonstrations
 
-### 1. Local FastAPI deployment
+### Local FastAPI deployment
 [![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
 
-
-### 2. Full Docker containerization (build → run → live prediction)
+### Full Docker containerization (build → run → prediction)
 [![Docker containerization demo](https://img.youtube.com/vi/L4TPK6dOKyA/maxresdefault.jpg)](https://youtu.be/L4TPK6dOKyA)
 
-Both demos look identical — this proves that Docker provides **exactly the same behavior** as local run. Perfect reproducibility achieved.
-
-
+Both demos look identical — this is the point of Docker: **100% reproducible environment**
