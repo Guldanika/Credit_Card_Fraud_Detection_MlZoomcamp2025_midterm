@@ -26,7 +26,7 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
-📊 Exploratory Data Analysis (EDA) Summary
+📊 Exploratory Data Analysis (EDA) - Summary
 
 The Credit Card Fraud Detection dataset contains 284,807 transactions, of which only 0.17% are fraudulent. Below are the key insights from the exploratory analysis.
 
