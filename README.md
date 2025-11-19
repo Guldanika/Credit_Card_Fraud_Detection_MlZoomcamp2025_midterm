@@ -76,7 +76,7 @@ API Usage Example (Swagger UI available at /docs)
 
 
 Video Demonstration
-30-second video showing Docker build → run → live fraud prediction is on my Youtube chanel here. 
+30-second video showing Docker build → run → live fraud prediction is on my Youtube chanel here https://youtu.be/x-26tp88zHw . 
 Conclusion
 The model successfully detects fraudulent transactions in highly imbalanced real-world data and is fully production-ready (FastAPI + Docker).
 
