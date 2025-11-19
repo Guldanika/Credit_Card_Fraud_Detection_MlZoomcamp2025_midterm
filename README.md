@@ -26,6 +26,18 @@ This project covers the complete ML lifecycle:
 - Dependency management
 - Full containerization with Docker
 
+## Project Structure 
+```
+├── app.py                     # FastAPI service
+├── train_model_fraud_detection.py  # Training script (exported from notebook)
+├── model.pkl                  # Final Logistic Regression model
+├── threshold.pkl              # Optimal threshold
+├── requirements.txt
+├── Dockerfile                 # Full containerization
+├── creditcard.csv             # Dataset (284807 rows)
+└── README.md                  # You are here
+```
+
 **📊 EXPLORATORY DATA ANALYSIS (EDA) - Summary**
 
 The Credit Card Fraud Detection dataset contains 284,807 transactions, of which only 0.17% are fraudulent. Below are the key insights from the exploratory analysis.
@@ -119,7 +131,7 @@ docker run -p 8000:8000 fraud-detection
 
 ## Video Demonstrations
 
-### Local FastAPI deployment
+### **Local FastAPI deployment**
 ```
 [![Local FastAPI demo](https://img.youtube.com/vi/x-26tp88zHw/maxresdefault.jpg)](https://youtu.be/x-26tp88zHw)
 ```
@@ -142,17 +154,6 @@ Both demos look identical — this is the point of Docker: **100% reproducible e
 
 **Final chosen model:** Logistic Regression with custom threshold = 1.0  
 → Perfect balance of extremely high recall on fraud while keeping precision acceptable for production use.
-
-## Project Structure 
-
-├── app.py                     # FastAPI service
-├── train_model_fraud_detection.py  # Training script (exported from notebook)
-├── model.pkl                  # Final Logistic Regression model
-├── threshold.pkl              # Optimal threshold
-├── requirements.txt
-├── Dockerfile                 # Full containerization
-├── creditcard.csv             # Dataset (284807 rows)
-└── README.md                  # You are here
 
 
 ## How to Run
