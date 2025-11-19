@@ -68,6 +68,25 @@ Dataset size allows efficient training even with SMOTE applied.
 
 The dataset is clean, highly imbalanced, and structurally suited for anomaly detection and binary classification. Several PCA components demonstrate strong separability between fraud and non-fraud classes, enabling effective modeling with Logistic Regression, Random Forest, XGBoost, or ensemble approaches, especially when combined with SMOTE and threshold optimization.
 
+**MODELLING APPROACH & RESULTS**
+
+## Modeling Results
+
+Used SMOTE for oversampling on training data only.
+
+| Model                | Precision (1) | Recall (1) | F1 (1) | Notes                          |
+|----------------------|---------------|------------|--------|--------------------------------|
+| Logistic Regression  | 0.9206        | 0.7838     | 0.8467 | Final chosen model             |
+| Random Forest        | ~0.95         | ~0.82      | ~0.88  | Good but slower                |
+| XGBoost              | ~0.95         | ~0.82      | ~0.88  | Similar to RF                  |
+
+Best threshold (Youden’s J on validation): ~0.9837 → final threshold = 1.0 (perfect for production recall focus)
+
+Test set (final Logistic Regression with optimal threshold):
+- Precision 0.9206 → Recall 0.7838 → F1 0.8467
+- Overall accuracy 99.95%
+
+
 ## Video Demonstrations
 
 ### Local FastAPI deployment
